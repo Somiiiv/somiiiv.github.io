@@ -73,12 +73,12 @@ const translations = {
 };
 
 function setLanguage(lang) {
-    // Update the document title
+    // Update the document title based on selected language
     if (translations[lang].title) {
         document.title = translations[lang].title;
     }
 
-    // Find all elements with a data-key attribute and update their text
+    // Update all elements that have a data-key attribute
     const elements = document.querySelectorAll("[data-key]");
     elements.forEach(el => {
         const key = el.getAttribute("data-key");
@@ -87,7 +87,7 @@ function setLanguage(lang) {
         }
     });
 
-    // Save language selection in localStorage
+    // Save language selection to localStorage so that it persists across pages
     localStorage.setItem('selectedLanguage', lang);
 }
 
@@ -100,17 +100,17 @@ function closeSidebar() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Check localStorage for a saved language; default to 'latin' if none.
+    // Retrieve the language from localStorage, defaulting to 'latin' if not set
     const storedLang = localStorage.getItem('selectedLanguage') || 'latin';
     setLanguage(storedLang);
 
-    // Set the language selector drop-down to the stored language
+    // Set the language drop-down to the stored language
     const langSelect = document.getElementById("languageSelect");
     if (langSelect) {
         langSelect.value = storedLang;
     }
 
-    // Add event listener for sidebar dropdown toggling (for mobile)
+    // Event listener for the sidebar dropdown toggling (for mobile)
     document.querySelectorAll('.dropdown .dropbtn').forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Optionally, close any open dropdown if clicking outside.
+    // Optionally close any open dropdown if clicking outside
     window.addEventListener('click', function() {
         document.querySelectorAll('.dropdown-content').forEach(dropdown => {
             dropdown.classList.remove('show');

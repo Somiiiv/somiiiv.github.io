@@ -74,7 +74,9 @@ const translations = {
 
 function setLanguage(lang) {
     // Update the document title
-    document.title = translations[lang].title;
+    if (translations[lang].title) {
+        document.title = translations[lang].title;
+    }
 
     // Find all elements with a data-key attribute and update their text
     const elements = document.querySelectorAll("[data-key]");
@@ -86,7 +88,17 @@ function setLanguage(lang) {
     });
 }
 
-// Set the default language to Serbian Latinica when the page loads
+function openSidebar() {
+    document.getElementById("sidebar").style.width = "250px";
+}
+
+function closeSidebar() {
+    document.getElementById("sidebar").style.width = "0";
+}
+
 document.addEventListener("DOMContentLoaded", function() {
-    setLanguage('latin');
+    // Set default language (Latinica) when the page loads.
+    const langSelect = document.getElementById("languageSelect");
+    const lang = langSelect ? langSelect.value : 'latin';
+    setLanguage(lang);
 });

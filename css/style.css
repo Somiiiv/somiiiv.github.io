@@ -1,133 +1,134 @@
 /* css/style.css */
 
-/* Basic Reset and Body Styles */
-body {
+/* Basic Reset */
+* {
+    box-sizing: border-box;
     margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    padding: 0;
 }
 
-/* Header Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #fff;
+    color: #333;
+}
+
+/* Header */
 header {
     background-color: #FF4500; /* Orange‑Red */
     color: #fff;
-    padding: 20px 0;
-}
-
-header .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-/* Navigation Menu */
-nav {
-    margin-top: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li {
+    padding: 10px 20px;
     position: relative;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #fff;
+}
+
+/* Language Selector */
+.language-selector select {
+    padding: 5px;
+    border: none;
+    background-color: #fff;
+    color: #FF4500;
+    font-weight: bold;
     border-radius: 4px;
 }
 
-/* Submenu (for Sekcije) */
-.submenu {
-    display: none;
-    position: absolute;
-    background-color: #FF4500;
-    top: 35px;
+/* Sidebar Navigation */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
     left: 0;
-    list-style: none;
-    padding: 10px 0;
-    border-radius: 4px;
+    background-color: #FF4500;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
 }
 
-nav ul li:hover .submenu {
+.sidebar a, .sidebar .dropbtn {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Close button in sidebar */
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+}
+
+/* Dropdown within Sidebar */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #FF4500;
+    margin-left: 15px;
+}
+
+.dropdown-content a {
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
-.submenu li {
-    width: 150px;
-    text-align: left;
-}
-
-/* Container */
+/* Container for main content */
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
-    padding: 20px 0;
+    margin: 20px auto;
+    padding: 20px;
 }
 
-/* Section Styles */
-section {
-    padding: 40px 0;
-    border-bottom: 1px solid #ddd;
+/* Main element spacing */
+main {
+    padding-top: 20px;
 }
 
-section:last-of-type {
-    border-bottom: none;
-}
-
-h2 {
-    color: #FF4500;
-    margin-bottom: 20px;
-}
-
-.section-item {
-    margin-bottom: 20px;
-}
-
-/* Language Selector Styles */
-.language-selector {
-    margin-top: 10px;
-}
-
-.language-selector button {
-    margin: 0 5px;
-    padding: 5px 10px;
-    background-color: #fff;
-    color: #FF4500;
-    border: 2px solid #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.language-selector button:hover {
-    background-color: #FF4500;
+/* Footer */
+footer {
+    background-color: #333;
     color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Contact Form Styles */
+/* Contact Form */
 form {
     display: flex;
     flex-direction: column;
@@ -157,12 +158,4 @@ form button {
 
 form button:hover {
     background-color: #e03d00;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
 }

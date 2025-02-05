@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-key="contact">Kontakt - Srpsko Udruženje Solna</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Sidebar Navigation -->
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+  <a href="index.html" data-key="home">Početna</a>
+  <a href="about.html" data-key="about">O nama</a>
+  <div class="dropdown">
+    <button class="dropbtn" data-key="sections">Sekcije</button>
+    <div class="dropdown-content">
+      <a href="folklor.html" data-key="folklore">Folklor</a>
+      <a href="karate.html" data-key="karate">Karate</a>
+    </div>
+  </div>
+  <a href="events.html" data-key="events">Događaji</a>
+  <a href="galleries.html" data-key="galleries">Galerije</a>
+  <a href="contact.html" data-key="contact">Kontakt</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="header-container">
+    <div class="hamburger" onclick="openSidebar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="language-selector">
+      <select id="languageSelect" onchange="setLanguage(this.value)">
+        <option value="latin">Latinica</option>
+        <option value="cyrillic">Ćirilica</option>
+        <option value="swedish">Svenska</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main>
+  <div class="container">
+    <h1 data-key="contact">Kontakt</h1>
+    <p data-key="contactContent">
+      Kontaktirajte nas putem emaila ili posetite našu lokaciju.
+    </p>
+    <form id="contactForm">
+      <label for="name" data-key="nameLabel">Ime:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email" data-key="emailLabel">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message" data-key="messageLabel">Poruka:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit" data-key="sendButton">Pošalji</button>
+    </form>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Srpsko udruženje Solna. Sva prava zadržana.</p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

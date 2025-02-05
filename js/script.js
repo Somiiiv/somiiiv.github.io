@@ -87,7 +87,13 @@ function setLanguage(lang) {
         }
     });
 
-    // Save language selection to localStorage so that it persists across pages
+    // Update the language selector dropdown
+    const langSelect = document.getElementById("languageSelect");
+    if (langSelect) {
+        langSelect.value = lang;
+    }
+
+    // Save language selection to localStorage
     localStorage.setItem('selectedLanguage', lang);
 }
 
@@ -100,9 +106,8 @@ function closeSidebar() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Retrieve the language from localStorage, defaulting to 'latin' if not set
     const storedLang = localStorage.getItem('selectedLanguage') || 'latin';
-    setLanguage(storedLang);
+    setLanguage(storedLang); // This will update both content and dropdown
 
     // Set the language drop-down to the stored language
     const langSelect = document.getElementById("languageSelect");

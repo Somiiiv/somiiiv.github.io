@@ -1,75 +1,131 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srpsko Udruženje Solna</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The title will be updated by the language script -->
+    <title data-key="title">Srpsko Udruženje Solna</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!-- Navigacija -->
+<!-- Header with Navigation and Language Selection -->
 <header>
-    <h1>Srpsko Udruženje Solna</h1>
-    <nav>
-        <ul>
-            <li><a href="#home" data-lang="home">Početna</a></li>
-            <li><a href="#about" data-lang="about">O nama</a></li>
-            <li><a href="#sections" data-lang="sections">Sekcije</a></li>
-            <li><a href="#events" data-lang="events">Događaji</a></li>
-            <li><a href="#gallery" data-lang="gallery">Galerija</a></li>
-            <li><a href="#contact" data-lang="contact">Kontakt</a></li>
-        </ul>
-    </nav>
-    <div class="language-switcher">
-        <button onclick="changeLanguage('sr-lat')">SR (Latinica)</button>
-        <button onclick="changeLanguage('sr-cyrl')">СР (Ћирилица)</button>
-        <button onclick="changeLanguage('sv')">Svenska</button>
+    <div class="container">
+        <h1 data-key="welcome">Dobrodošli u Srpsko udruženje Solna</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" data-key="home">Početna</a></li>
+                <li><a href="#about" data-key="about">O nama</a></li>
+                <li>
+                    <a href="#sections" data-key="sections">Sekcije</a>
+                    <ul class="submenu">
+                        <li><a href="#folklore" data-key="folklore">Folklor</a></li>
+                        <li><a href="#karate" data-key="karate">Karate</a></li>
+                    </ul>
+                </li>
+                <li><a href="#events" data-key="events">Događaji</a></li>
+                <li><a href="#galleries" data-key="galleries">Galerije</a></li>
+                <li><a href="#contact" data-key="contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <button onclick="setLanguage('latin')">Latinica</button>
+            <button onclick="setLanguage('cyrillic')">Ćirilica</button>
+            <button onclick="setLanguage('swedish')">Svenska</button>
+        </div>
     </div>
 </header>
 
-<!-- Početna stranica -->
+<!-- Home Section -->
 <section id="home">
-    <h2 data-lang="home-title">Dobrodošli u Srpsko Udruženje Solna!</h2>
-    <p data-lang="home-text">Naše udruženje okuplja ljubitelje srpske tradicije, folklora i zajedništva.</p>
+    <div class="container">
+        <h2 data-key="home">Početna</h2>
+        <p data-key="homeContent">
+            Dobrodošli na našu zvaničnu stranicu, mesto gde možete saznati više o našem udruženju, aktivnostima i događajima.
+        </p>
+    </div>
 </section>
 
-<!-- O nama -->
+<!-- About Us Section -->
 <section id="about">
-    <h2 data-lang="about-title">O nama</h2>
-    <p data-lang="about-text">Srpsko Udruženje Solna promoviše kulturu, folklor i zajedništvo kroz brojne aktivnosti.</p>
+    <div class="container">
+        <h2 data-key="about">O nama</h2>
+        <p data-key="aboutContent">
+            Srpsko udruženje Solna je posvećeno očuvanju tradicije i promociji srpskog folklora i borilačkih veština.
+        </p>
+    </div>
 </section>
 
-<!-- Sekcije -->
+<!-- Sections: Folklor and Karate -->
 <section id="sections">
-    <h2 data-lang="sections-title">Naše sekcije</h2>
-    <ul>
-        <li data-lang="section-1">Folklorna grupa</li>
-        <li data-lang="section-2">Pevačka grupa</li>
-        <li data-lang="section-3">Dečija sekcija</li>
-    </ul>
+    <div class="container">
+        <h2 data-key="sections">Sekcije</h2>
+        <div class="section-item" id="folklore">
+            <h3 data-key="folklore">Folklor</h3>
+            <p data-key="folkloreContent">
+                Naša folklorna sekcija promoviše tradicionalnu muziku, ples i nošnje.
+            </p>
+        </div>
+        <div class="section-item" id="karate">
+            <h3 data-key="karate">Karate</h3>
+            <p data-key="karateContent">
+                Trening i tehnike karatea za sve uzraste i nivoe iskustva.
+            </p>
+        </div>
+    </div>
 </section>
 
-<!-- Događaji -->
+<!-- Events Section -->
 <section id="events">
-    <h2 data-lang="events-title">Predstojeći događaji</h2>
-    <p data-lang="events-text">Pratite naše nastupe i događaje.</p>
+    <div class="container">
+        <h2 data-key="events">Događaji</h2>
+        <p data-key="eventsContent">
+            Ovde možete pronaći informacije o predstojećim događajima, festivalima i nastupima.
+        </p>
+    </div>
 </section>
 
-<!-- Galerija -->
-<section id="gallery">
-    <h2 data-lang="gallery-title">Galerija</h2>
-    <p data-lang="gallery-text">Ovde možete videti slike i video zapise sa naših nastupa.</p>
+<!-- Galleries Section -->
+<section id="galleries">
+    <div class="container">
+        <h2 data-key="galleries">Galerije</h2>
+        <p data-key="galleriesContent">
+            Pogledajte galeriju naših najvažnijih trenutaka i događaja.
+        </p>
+    </div>
 </section>
 
-<!-- Kontakt -->
+<!-- Contact Section -->
 <section id="contact">
-    <h2 data-lang="contact-title">Kontakt</h2>
-    <p data-lang="contact-text">Biće dodato kasnije...</p>
-    <a href="https://www.facebook.com/p/Srpsko-udru%C5%BEenje-Solna-100024343121028/?locale=sr_RS" target="_blank">Facebook</a> |
-    <a href="https://www.instagram.com/srpsko_udruzenje_solna/" target="_blank">Instagram</a>
+    <div class="container">
+        <h2 data-key="contact">Kontakt</h2>
+        <p data-key="contactContent">
+            Kontaktirajte nas putem emaila ili posetite našu lokaciju.
+        </p>
+        <form id="contactForm">
+            <label for="name" data-key="nameLabel">Ime:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email" data-key="emailLabel">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message" data-key="messageLabel">Poruka:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" data-key="sendButton">Pošalji</button>
+        </form>
+    </div>
 </section>
 
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Srpsko udruženje Solna. Sva prava zadržana.</p>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/script.js"></script>
 </body>
 </html>

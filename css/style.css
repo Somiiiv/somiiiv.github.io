@@ -1,0 +1,168 @@
+/* css/style.css */
+
+/* Basic Reset and Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header Styles */
+header {
+    background-color: #FF4500; /* Orange‑Red */
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Menu */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Submenu (for Sekcije) */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #FF4500;
+    top: 35px;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    width: 150px;
+    text-align: left;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2 {
+    color: #FF4500;
+    margin-bottom: 20px;
+}
+
+.section-item {
+    margin-bottom: 20px;
+}
+
+/* Language Selector Styles */
+.language-selector {
+    margin-top: 10px;
+}
+
+.language-selector button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #FF4500;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.language-selector button:hover {
+    background-color: #FF4500;
+    color: #fff;
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #FF4500;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #e03d00;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}

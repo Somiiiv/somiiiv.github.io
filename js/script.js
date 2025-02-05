@@ -86,6 +86,9 @@ function setLanguage(lang) {
             el.textContent = translations[lang][key];
         }
     });
+
+    // Save language selection in localStorage
+    localStorage.setItem('selectedLanguage', lang);
 }
 
 function openSidebar() {
@@ -97,8 +100,31 @@ function closeSidebar() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Set default language (Latinica) when the page loads.
+    // Check localStorage for a saved language; default to 'latin' if none.
+    const storedLang = localStorage.getItem('selectedLanguage') || 'latin';
+    setLanguage(storedLang);
+
+    // Set the language selector drop-down to the stored language
     const langSelect = document.getElementById("languageSelect");
-    const lang = langSelect ? langSelect.value : 'latin';
-    setLanguage(lang);
+    if (langSelect) {
+        langSelect.value = storedLang;
+    }
+
+    // Add event listener for sidebar dropdown toggling (for mobile)
+    document.querySelectorAll('.dropdown .dropbtn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const dropdownContent = this.nextElementSibling;
+            if (dropdownContent) {
+                dropdownContent.classList.toggle('show');
+            }
+        });
+    });
+
+    // Optionally, close any open dropdown if clicking outside.
+    window.addEventListener('click', function() {
+        document.querySelectorAll('.dropdown-content').forEach(dropdown => {
+            dropdown.classList.remove('show');
+        });
+    });
 });

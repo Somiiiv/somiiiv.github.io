@@ -66,7 +66,8 @@ header {
     padding-top: 60px;
 }
 
-.sidebar a, .sidebar .dropbtn {
+.sidebar a,
+.sidebar .dropbtn {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
@@ -75,7 +76,8 @@ header {
     transition: 0.3s;
 }
 
-.sidebar a:hover, .dropdown:hover .dropbtn {
+.sidebar a:hover,
+.dropdown:hover .dropbtn {
     background-color: rgba(255,255,255,0.2);
 }
 
@@ -93,6 +95,7 @@ header {
 }
 
 .dropdown-content {
+    /* Hidden by default */
     display: none;
     background-color: #FF4500;
     margin-left: 15px;
@@ -103,7 +106,13 @@ header {
     font-size: 16px;
 }
 
+/* Show dropdown on hover (desktop) */
 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* For mobile toggling via JS */
+.dropdown-content.show {
     display: block;
 }
 

@@ -1,164 +1,145 @@
-/* css/style.css */
-
-/* Basic Reset */
+/* Reset */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background: #fff;
     color: #333;
 }
 
-/* Header */
+/* --------------------- Header Layout --------------------- */
 header {
-    background-color: #FF4500; /* Orange‑Red */
-    color: #fff;
-    padding: 10px 20px;
-    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.header-container {
+/* Top bar (red) */
+.header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #9C1B24; /* Deep red */
+    padding: 10px 20px;
 }
 
-/* Logo */
-.logo img {
-    height: 50px; /* Adjust as needed */
+/* Left side: Logo + Title */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;   /* Adjust to suit your crest/logo */
     width: auto;
 }
 
-/* Top Horizontal Navigation */
-.top-nav {
-    flex: 1; /* Expand to take available space */
-    margin: 0 20px;
+.site-title h1,
+.site-title h2 {
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: normal;
 }
 
-.top-nav ul {
+.site-title {
+    margin-left: 10px;
+}
+
+/* Right side (A A A, contact, map of site, search, etc.) */
+.top-right {
+    display: flex;
+    align-items: center;
+}
+
+.top-right a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Optional font-size controls (just a placeholder in this example) */
+.font-size-controls {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.font-size-controls a {
+    margin-right: 5px;
+}
+
+/* Search box container */
+.search-box {
+    position: relative;
+    display: inline-block;
+}
+
+.search-box input {
+    padding: 5px 30px 5px 10px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+}
+
+.search-box button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding-right: 5px;
+}
+
+/* --------------------- Navigation Bar (blue tabs) --------------------- */
+.main-menu {
+    background: #003366; /* Or use a gradient if you like */
+}
+
+/* If you want a gradient:
+   background: linear-gradient(to bottom, #003366 0%, #002244 100%);
+*/
+
+.main-menu ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+    justify-content: flex-start;
 }
 
-.top-nav ul li {
-    position: relative; /* For dropdown positioning */
+/* Each tab */
+.main-menu li {
+    border-right: 1px solid #fff;
 }
 
-.top-nav ul li a {
+.main-menu li:last-child {
+    border-right: none;
+}
+
+/* Nav links */
+.main-menu a {
+    display: block;
     color: #fff;
-    padding: 15px 20px;
     text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-.top-nav ul li a:hover,
-.top-nav ul li a:focus {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Dropdown Menu in Top Nav */
-.top-nav ul li.dropdown .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #FF4500;
-    top: 100%;
-    left: 0;
-    min-width: 150px;
-    z-index: 100;
-}
-
-.top-nav ul li.dropdown .dropdown-content a {
-    padding: 10px 15px;
-    white-space: nowrap;
-}
-
-.top-nav ul li.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Language Selector */
-.language-selector select {
-    padding: 5px;
-    border: none;
-    background-color: #fff;
-    color: #FF4500;
+    padding: 15px 20px;
     font-weight: bold;
-    border-radius: 4px;
+    white-space: nowrap; /* Keep text in one line */
 }
 
-/* Main Content Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+/* Hover/active states */
+.main-menu a:hover {
+    background-color: #002a5c;
 }
 
-/* Main Element Spacing */
+/* --------------------- Main Content --------------------- */
 main {
-    padding-top: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-form button {
-    margin-top: 15px;
-    padding: 10px;
-    border: none;
-    background-color: #FF4500;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #e03d00;
-}
-
-/* Responsive Adjustments (Optional) */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-    }
-    .top-nav ul {
-        flex-direction: column;
-    }
-    .top-nav ul li a {
-        padding: 10px;
-    }
 }

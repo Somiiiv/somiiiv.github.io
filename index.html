@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-key="title">Srpsko Udruženje Solna</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/png" href="images/udruzenje.png" />
+    <title>Српско Удружење Солна</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- Header with Top Horizontal Navigation -->
+
 <header>
-    <div class="header-container">
-        <!-- Logo -->
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/udruzenje.png" alt="Logo" />
-            </a>
+    <!-- Top red bar with logo/title/search -->
+    <div class="header-top">
+        <div class="logo-container">
+            <!-- Coat of arms / logo on the left -->
+            <img src="images/coat-of-arms.png" alt="Солна лого" class="logo" />
+            <!-- Site Title -->
+            <div class="site-title">
+                <h1>СРПСКО УДРУЖЕЊЕ</h1>
+                <h2>СОЛНА</h2>
+            </div>
         </div>
-        <!-- Top Navigation Menu -->
-        <nav class="top-nav">
-            <ul>
-                <li><a href="index.html" data-key="home">Početna</a></li>
-                <li><a href="about.html" data-key="about">O nama</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn" data-key="sections">Sekcije &#x25BE;</a>
-                    <div class="dropdown-content">
-                        <a href="folklor.html" data-key="folklore">Folklor</a>
-                        <a href="karate.html" data-key="karate">Karate</a>
-                    </div>
-                </li>
-                <li><a href="events.html" data-key="events">Događaji</a></li>
-                <li><a href="galleries.html" data-key="galleries">Galerije</a></li>
-                <li><a href="contact.html" data-key="contact">Kontakt</a></li>
-            </ul>
-        </nav>
-        <!-- Language Selector -->
-        <div class="language-selector">
-            <select id="languageSelect" onchange="setLanguage(this.value)">
-                <option value="latin">Srpski</option>
-                <option value="cyrillic">Српски</option>
-                <option value="swedish">Svenska</option>
-            </select>
+
+        <!-- Right side: e.g., “A A A”, contact, site map, search, etc. -->
+        <div class="top-right">
+            <div class="font-size-controls">
+                <a href="#">A</a>
+                <a href="#">A</a>
+                <a href="#">A</a>
+            </div>
+            <a href="#">Контакт</a> | <a href="#">Мапа сајта</a>
+            <div class="search-box">
+                <input type="text" placeholder="тражи…" />
+                <button>🔍</button>
+            </div>
         </div>
     </div>
+
+    <!-- Blue nav bar underneath -->
+    <nav class="main-menu">
+        <ul>
+            <li><a href="#">НАСЛОВНА</a></li>
+            <li><a href="#">АКТИВНОСТИ</a></li>
+            <li><a href="#">О НАМА</a></li>
+            <li><a href="#">ВЕСТИ</a></li>
+            <li><a href="#">ДОГАЂАЈИ</a></li>
+            <li><a href="#">ЗА ЧЛАНОВЕ</a></li>
+            <li><a href="#">ГАЛЕРИЈЕ</a></li>
+            <li><a href="#">ИНФО</a></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- Main Content -->
+<!-- Example content area -->
 <main>
-    <div class="container">
-        <h1 data-key="welcome">Dobrodošli u Srpsko udruženje Solna</h1>
-        <p data-key="homeContent">
-            Dobrodošli na našu zvaničnu stranicu, mesto gde možete saznati više o našem udruženju, aktivnostima i događajima.
-        </p>
-    </div>
+    <h1>Добродошли</h1>
+    <p>Овде иде садржај ваше почетне стране.</p>
 </main>
 
-<script src="js/script.js"></script>
 </body>
 </html>

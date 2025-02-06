@@ -1,4 +1,3 @@
-
 /* css/style.css */
 
 /* Basic Reset */
@@ -15,10 +14,17 @@ body {
     color: #333;
 }
 
+/* Define Color Variables */
+:root {
+    --primary-color: #c62828;    /* Deep red for header/sidebar backgrounds */
+    --primary-hover: #b71c1c;    /* Slightly darker red for hover states */
+    --white-color: #fff;         /* White text and backgrounds where needed */
+}
+
 /* Header */
 header {
-    background-color: #FF4500; /* Orange‑Red */
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     padding: 10px 20px;
     position: relative;
 }
@@ -40,15 +46,15 @@ header {
     width: 25px;
     height: 3px;
     margin: 4px 0;
-    background-color: #fff;
+    background-color: var(--white-color);
 }
 
 /* Language Selector */
 .language-selector select {
     padding: 5px;
     border: none;
-    background-color: #fff;
-    color: #FF4500;
+    background-color: var(--white-color);
+    color: var(--primary-color);
     font-weight: bold;
     border-radius: 4px;
 }
@@ -61,25 +67,28 @@ header {
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: #FF4500;
+    background-color: var(--primary-color);
     overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
+    transition: width 0.3s;
+    padding-top: 20px; /* Reduced top padding so items start higher */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Sidebar links and dropdown buttons */
 .sidebar a,
 .sidebar .dropbtn {
     padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
-    color: #fff;
+    color: var(--white-color);
     display: block;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
+/* Hover state for sidebar items */
 .sidebar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: rgba(255,255,255,0.2);
+    background-color: var(--primary-hover);
 }
 
 /* Close button in sidebar */
@@ -88,6 +97,7 @@ header {
     top: 10px;
     right: 20px;
     font-size: 36px;
+    color: var(--white-color);
 }
 
 /* Dropdown within Sidebar */
@@ -98,8 +108,8 @@ header {
 .dropdown-content {
     /* Hidden by default */
     display: none;
-    background-color: #FF4500;
-    margin-left: 15px;
+    background-color: var(--primary-color);
+    margin-left: 10px;
 }
 
 .dropdown-content a {
@@ -127,7 +137,7 @@ header {
 
 .logo img {
     height: 50px; /* Adjust the height as needed */
-    width: auto; /* Keeps the aspect ratio */
+    width: auto;  /* Keeps the aspect ratio */
     display: block;
     margin: 0 auto; /* Centers the logo */
 }
@@ -140,7 +150,7 @@ main {
 /* Footer */
 footer {
     background-color: #333;
-    color: #fff;
+    color: var(--white-color);
     text-align: center;
     padding: 20px;
 }
@@ -156,7 +166,8 @@ form label {
     margin: 10px 0 5px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -166,13 +177,13 @@ form button {
     margin-top: 15px;
     padding: 10px;
     border: none;
-    background-color: #FF4500;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--white-color);
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 form button:hover {
-    background-color: #e03d00;
+    background-color: var(--primary-hover);
 }

@@ -22,7 +22,7 @@ const translations = {
         nameLabel: "Ime:",
         emailLabel: "Email:",
         messageLabel: "Poruka:",
-        sendButton: "Pošalji"
+        sendButton: "Pošalji",
         solna: "solna"
     },
     cyrillic: {
@@ -46,7 +46,7 @@ const translations = {
         nameLabel: "Име:",
         emailLabel: "Емаил:",
         messageLabel: "Порука:",
-        sendButton: "Пошаљи"
+        sendButton: "Пошаљи",
         solna: "solna"
     },
     swedish: {
@@ -70,7 +70,7 @@ const translations = {
         nameLabel: "Namn:",
         emailLabel: "E-post:",
         messageLabel: "Meddelande:",
-        sendButton: "Skicka"
+        sendButton: "Skicka",
         solna: "solna"
     }
 };

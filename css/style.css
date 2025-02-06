@@ -16,10 +16,11 @@ body {
 
 /* Header */
 header {
-    background-color: #FF4500; /* Orange‑Red */
+    background-color: #D32F2F; /* Material Red 700 */
     color: #fff;
     padding: 10px 20px;
     position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .header-container {
@@ -47,7 +48,7 @@ header {
     padding: 5px;
     border: none;
     background-color: #fff;
-    color: #FF4500;
+    color: #D32F2F;
     font-weight: bold;
     border-radius: 4px;
 }
@@ -60,10 +61,11 @@ header {
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: #FF4500;
+    background-color: #D32F2F;
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
 }
 
 .sidebar a,
@@ -97,7 +99,7 @@ header {
 .dropdown-content {
     /* Hidden by default */
     display: none;
-    background-color: #FF4500;
+    background-color: #D32F2F;
     margin-left: 15px;
 }
 
@@ -138,7 +140,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #D32F2F;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -155,7 +157,8 @@ form label {
     margin: 10px 0 5px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -165,7 +168,7 @@ form button {
     margin-top: 15px;
     padding: 10px;
     border: none;
-    background-color: #FF4500;
+    background-color: #D32F2F;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
@@ -173,5 +176,5 @@ form button {
 }
 
 form button:hover {
-    background-color: #e03d00;
+    background-color: #B71C1C;
 }

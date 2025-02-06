@@ -1,3 +1,5 @@
+/* css/style.css */
+
 /* Basic Reset */
 * {
     box-sizing: border-box;
@@ -12,89 +14,126 @@ body {
     color: #333;
 }
 
-/* Header (Top Banner) */
+/* Header */
 header {
-    background-color: #b11c24; /* A deeper red similar to the old site */
+    background-color: #FF4500; /* Orange‑Red */
     color: #fff;
     padding: 10px 20px;
     position: relative;
 }
 
-.header-top {
+.header-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.logo {
-    display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 60px;  /* Adjust as needed */
-    margin-right: 10px;
+/* Hamburger Menu */
+.hamburger {
+    cursor: pointer;
+    display: inline-block;
 }
 
-.header-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.language-selector {
-    margin-left: auto;
-}
-
-/* Horizontal Navigation */
-.navbar {
-    background-color: #9e1822; /* Slightly darker or lighter if you prefer */
-    padding: 0 20px;
-}
-
-.nav-list {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.nav-list li {
-    margin: 0;
-}
-
-.nav-list li a {
+.hamburger span {
     display: block;
-    padding: 12px 15px;
-    color: #fff;
-    text-decoration: none;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: #fff;
+}
+
+/* Language Selector */
+.language-selector select {
+    padding: 5px;
+    border: none;
+    background-color: #fff;
+    color: #FF4500;
     font-weight: bold;
+    border-radius: 4px;
 }
 
-.nav-list li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+/* Sidebar Navigation */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #FF4500;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
 }
 
-/* Three-Column Layout:
-   Left aside (Najnovije), main content, right aside (Sponzori) */
-.content-wrapper {
-    display: flex;
+.sidebar a,
+.sidebar .dropbtn {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Close button in sidebar */
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+}
+
+/* Dropdown within Sidebar */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    /* Hidden by default */
+    display: none;
+    background-color: #FF4500;
+    margin-left: 15px;
+}
+
+.dropdown-content a {
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* For mobile toggling via JS */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Container for main content */
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
-    gap: 20px;
+    padding: 20px;
 }
 
-/* Left and Right sidebars */
-aside {
-    flex: 0 0 220px; /* fixed width sidebars */
-    background-color: #f0f0f0;
-    padding: 10px;
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto; /* Keeps the aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the logo */
 }
 
-/* Main area */
+/* Main element spacing */
 main {
-    flex: 1;
-    padding: 10px;
-    background: #fff;
+    padding-top: 20px;
 }
 
 /* Footer */
@@ -105,47 +144,34 @@ footer {
     padding: 20px;
 }
 
-/* Optional: Style for “Najnovije na sajtu” block */
-.latest-news h2 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #b11c24;
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
 }
 
-.latest-news ul {
-    list-style: none;
+form label {
+    margin: 10px 0 5px;
 }
 
-.latest-news li {
-    margin-bottom: 8px;
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-.latest-news li a {
-    color: #333;
-    text-decoration: none;
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #FF4500;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.latest-news li a:hover {
-    text-decoration: underline;
-}
-
-/* Optional: Style for “Sponzori” block */
-.sponsors h2 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #b11c24;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-    }
-    aside {
-        flex: 1;
-        margin-bottom: 20px;
-    }
-    main {
-        flex: 1;
-    }
+form button:hover {
+    background-color: #e03d00;
 }

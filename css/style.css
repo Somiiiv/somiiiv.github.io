@@ -124,6 +124,13 @@ header {
     padding: 20px;
 }
 
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto; /* Keeps the aspect ratio */
+    display: block;
+    margin: 0 auto; /* Centers the logo */
+}
+
 /* Main element spacing */
 main {
     padding-top: 20px;

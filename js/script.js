@@ -23,6 +23,7 @@ const translations = {
         emailLabel: "Email:",
         messageLabel: "Poruka:",
         sendButton: "Pošalji"
+        solna: "solna"
     },
     cyrillic: {
         title: "Српско Удружење Солна",
@@ -46,6 +47,7 @@ const translations = {
         emailLabel: "Емаил:",
         messageLabel: "Порука:",
         sendButton: "Пошаљи"
+        solna: "solna"
     },
     swedish: {
         title: "Srpsko Udruženje Solna",
@@ -69,6 +71,7 @@ const translations = {
         emailLabel: "E-post:",
         messageLabel: "Meddelande:",
         sendButton: "Skicka"
+        solna: "solna"
     }
 };
 

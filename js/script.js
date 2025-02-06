@@ -13,7 +13,7 @@ const translations = {
         galleries: "Galerije",
         contact: "Kontakt",
         homeContent: "Dobrodošli na našu zvaničnu stranicu, mesto gde možete saznati više o našem udruženju, aktivnostima i događajima.",
-        aboutContent: "Srpsko udruženje Solna je posvećeno očuvanju tradicije i promociji srpskog folklora i borilačkih veština.",
+        aboutContent: "",
         folkloreContent: "Naša folklorna sekcija promoviše tradicionalnu muziku, ples i nošnje.",
         karateContent: "Trening i tehnike karatea za sve uzraste i nivoe iskustva.",
         eventsContent: "Ovde možete pronaći informacije o predstojećim događajima, festivalima i nastupima.",

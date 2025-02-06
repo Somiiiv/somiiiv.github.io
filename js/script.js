@@ -99,17 +99,15 @@ function setLanguage(lang) {
 
 function openSidebar() {
     document.getElementById("sidebar").style.width = "250px";
-    document.getElementById("sidebarOverlay").style.display = "block";
 }
 
 function closeSidebar() {
     document.getElementById("sidebar").style.width = "0";
-    document.getElementById("sidebarOverlay").style.display = "none";
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     const storedLang = localStorage.getItem('selectedLanguage') || 'latin';
-    setLanguage(storedLang); // Update content and dropdown
+    setLanguage(storedLang); // This will update both content and dropdown
 
     // Set the language drop-down to the stored language
     const langSelect = document.getElementById("languageSelect");

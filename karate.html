@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title data-key="karate">Karate - Srpsko Udruženje Solna</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/png" href="images/udruzenje.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/udruzenje.png" />
 </head>
 <body>
-<!-- Sidebar Navigation -->
-<div id="sidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
-  <a href="index.html" data-key="home">Početna</a>
-  <a href="about.html" data-key="about">O nama</a>
-  <div class="dropdown">
-    <a href="#" class="dropbtn" data-key="sections">Sekcije⌄</a>
-    <div class="dropdown-content">
-      <a href="folklor.html" data-key="folklore">Folklor</a>
-      <a href="karate.html" data-key="karate">Karate</a>
-    </div>
-  </div>
-  <a href="events.html" data-key="events">Događaji</a>
-  <a href="galleries.html" data-key="galleries">Galerije</a>
-  <a href="contact.html" data-key="contact">Kontakt</a>
-</div>
-
-<!-- Header -->
+<!-- Header with Top Horizontal Navigation -->
 <header>
   <div class="header-container">
-    <div class="hamburger" onclick="openSidebar()">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/udruzenje.png" alt="Logo" />
+      </a>
     </div>
+    <nav class="top-nav">
+      <ul>
+        <li><a href="index.html" data-key="home">Početna</a></li>
+        <li><a href="about.html" data-key="about">O nama</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn" data-key="sections">Sekcije &#x25BE;</a>
+          <div class="dropdown-content">
+            <a href="folklor.html" data-key="folklore">Folklor</a>
+            <a href="karate.html" data-key="karate">Karate</a>
+          </div>
+        </li>
+        <li><a href="events.html" data-key="events">Događaji</a></li>
+        <li><a href="galleries.html" data-key="galleries">Galerije</a></li>
+        <li><a href="contact.html" data-key="contact">Kontakt</a></li>
+      </ul>
+    </nav>
     <div class="language-selector">
       <select id="languageSelect" onchange="setLanguage(this.value)">
         <option value="latin">Srpski</option>
@@ -52,7 +51,6 @@
     </p>
   </div>
 </main>
-
 
 <script src="js/script.js"></script>
 </body>

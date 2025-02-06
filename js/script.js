@@ -6,7 +6,7 @@ const translations = {
         welcome: "Dobrodošli u Srpsko udruženje Solna",
         home: "Početna",
         about: "O nama",
-        sections: "Sekcije",
+        sections: "Sekcije⌄",
         folklore: "Folklor",
         karate: "Karate",
         events: "Događaji",

@@ -1,164 +1,93 @@
-/* css/style.css */
-
-/* Basic Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background: #fff;
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #FF4500; /* Orange‑Red */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
     color: #fff;
-    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #FF4500;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul li {
     position: relative;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Logo */
-.logo img {
-    height: 50px; /* Adjust as needed */
-    width: auto;
-}
-
-/* Top Horizontal Navigation */
-.top-nav {
-    flex: 1; /* Expand to take available space */
-    margin: 0 20px;
-}
-
-.top-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
-
-.top-nav ul li {
-    position: relative; /* For dropdown positioning */
-}
-
-.top-nav ul li a {
-    color: #fff;
-    padding: 15px 20px;
+.sidebar-nav ul li a {
+    padding: 15px 25px;
     text-decoration: none;
+    font-size: 18px;
+    color: #fff;
     display: block;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
-.top-nav ul li a:hover,
-.top-nav ul li a:focus {
+.sidebar-nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Dropdown Menu in Top Nav */
-.top-nav ul li.dropdown .dropdown-content {
-    display: none;
+.sidebar .close-btn {
     position: absolute;
-    background-color: #FF4500;
-    top: 100%;
-    left: 0;
-    min-width: 150px;
-    z-index: 100;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
 }
 
-.top-nav ul li.dropdown .dropdown-content a {
-    padding: 10px 15px;
-    white-space: nowrap;
-}
-
-.top-nav ul li.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Language Selector */
-.language-selector select {
-    padding: 5px;
-    border: none;
-    background-color: #fff;
-    color: #FF4500;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-/* Main Content Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-/* Main Element Spacing */
-main {
-    padding-top: 20px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-}
-
-form label {
-    margin: 10px 0 5px;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-form button {
-    margin-top: 15px;
-    padding: 10px;
-    border: none;
-    background-color: #FF4500;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #e03d00;
-}
-
-/* Responsive Adjustments (Optional) */
+/* Show hamburger on mobile */
 @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .top-nav {
+        display: none;
+    }
+
     .header-container {
-        flex-direction: column;
+        justify-content: center;
     }
-    .top-nav ul {
-        flex-direction: column;
+
+    .logo {
+        margin-left: 40px; /* Space for hamburger */
     }
-    .top-nav ul li a {
-        padding: 10px;
-    }
+}
+
+/* Sidebar dropdown */
+.sidebar-dropdown-content {
+    display: none;
+    background-color: #ff6d3a;
+}
+
+.sidebar-dropdown-content a {
+    padding-left: 35px !important;
+}
+
+.sidebar-dropdown.active .sidebar-dropdown-content {
+    display: block;
 }

@@ -8,9 +8,11 @@
     <link rel="icon" type="image/png" href="images/udruzenje.png" />
 </head>
 <body>
-<!-- Header with Top Horizontal Navigation -->
+<!-- Header with Hamburger Menu -->
 <header>
     <div class="header-container">
+        <!-- Hamburger Button -->
+        <button class="hamburger" onclick="toggleSidebar()">&#9776;</button>
         <!-- Logo -->
         <div class="logo">
             <a href="index.html">
@@ -45,14 +47,32 @@
     </div>
 </header>
 
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="index.html" data-key="home">Početna</a></li>
+            <li><a href="about.html" data-key="about">O nama</a></li>
+            <li class="sidebar-dropdown">
+                <a href="#" data-key="sections">Sekcije ▾</a>
+                <div class="sidebar-dropdown-content">
+                    <a href="folklor.html" data-key="folklore">Folklor</a>
+                    <a href="karate.html" data-key="karate">Karate</a>
+                </div>
+            </li>
+            <li><a href="events.html" data-key="events">Događaji</a></li>
+            <li><a href="galleries.html" data-key="galleries">Galerije</a></li>
+            <li><a href="contact.html" data-key="contact">Kontakt</a></li>
+        </ul>
+    </nav>
+</div>
+
 <!-- Main Content -->
 <main>
     <div class="container">
         <h1 data-key="welcome">Srpsko udruženje Solna</h1>
-        <p data-key="homeContent">
-
-
-        </p>
+        <p data-key="homeContent"></p>
     </div>
 </main>
 

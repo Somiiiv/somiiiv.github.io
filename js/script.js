@@ -1,3 +1,4 @@
+// Translation data for three languages
 const translations = {
     latin: {
         nav: {
@@ -82,12 +83,15 @@ const translations = {
     }
 };
 
-document.addEventListener("DOMContentLoaded", function () {
+// Run translation on DOM load
+document.addEventListener("DOMContentLoaded", () => {
     const languageSelect = document.getElementById("languageSelect");
+    // Get saved language or default to 'latin'
     let currentLang = localStorage.getItem("selectedLanguage") || "latin";
     languageSelect.value = currentLang;
     translatePage(currentLang);
 
+    // Listen for language change and save preference
     languageSelect.addEventListener("change", function () {
         currentLang = this.value;
         localStorage.setItem("selectedLanguage", currentLang);
@@ -95,18 +99,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Function to update text content based on chosen language
 function translatePage(lang) {
     const elements = document.querySelectorAll("[data-i18n]");
     elements.forEach((el) => {
         const keys = el.getAttribute("data-i18n").split(".");
         let translation = translations[lang];
         keys.forEach((key) => {
-            if (translation) {
-                translation = translation[key];
-            }
+            if (translation) translation = translation[key];
         });
-        if (translation) {
-            el.innerText = translation;
-        }
+        if (translation) el.innerText = translation;
     });
 }

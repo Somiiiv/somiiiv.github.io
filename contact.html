@@ -2,28 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="nav.contact">Contact Us - Srpsko Udruženje Solna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="nav.contact">Kontakt - Srpsko Udruženje Solna</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
+<header class="site-header">
   <div class="header-container">
-    <div class="logo">
-      <img src="logo.png" alt="Srpsko Udruženje Solna Logo" />
+    <div class="crest-logo">
+      <img src="crest.png" alt="Crest Logo" />
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+        <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+        <li><a href="sections.html" data-i18n="nav.sections">Sekcije</a></li>
+        <li><a href="events.html" data-i18n="nav.events">Događaji</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
       </ul>
     </nav>
     <div class="language-selector">
       <select id="languageSelect">
-        <option value="latin">Srpski (Latinica)</option>
-        <option value="cyrillic">Српски (Ћирилица)</option>
+        <option value="latin">Srpski</option>
+        <option value="cyrillic">Српски</option>
         <option value="swedish">Svenska</option>
       </select>
     </div>
@@ -31,42 +33,42 @@
 </header>
 
 <main>
-  <section id="contact">
-    <h1 data-i18n="contact.title">Contact Us</h1>
-    <p data-i18n="contact.description">
-      Feel free to reach out to us with any questions or for more information.
+  <section class="page-heading">
+    <h1 data-i18n="contact.title">Kontakt</h1>
+  </section>
+
+  <section class="content-section">
+    <p data-i18n="contact.content">
+      Za sva pitanja, predloge ili saradnju, slobodno nam pišite.
+      Možete koristiti formu ispod ili nas kontaktirati putem društvenih mreža.
     </p>
-    <form id="contactForm">
+    <form class="contact-form">
       <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+        <label for="name" data-i18n="contactForm.nameLabel">Ime i prezime:</label>
+        <input type="text" id="name" required />
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <label for="email" data-i18n="contactForm.emailLabel">Email:</label>
+        <input type="email" id="email" required />
       </div>
       <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
+        <label for="message" data-i18n="contactForm.messageLabel">Poruka:</label>
+        <textarea id="message" rows="5" required></textarea>
       </div>
-      <button type="submit">Send Message</button>
+      <button type="submit" data-i18n="contactForm.sendBtn">Pošalji</button>
     </form>
   </section>
 </main>
 
 <footer>
-  <div class="social-media">
-    <a href="https://facebook.com" target="_blank">
-      <img src="facebook-icon.png" alt="Facebook" />
-    </a>
-    <a href="https://instagram.com" target="_blank">
-      <img src="instagram-icon.png" alt="Instagram" />
-    </a>
-    <a href="https://youtube.com" target="_blank">
-      <img src="youtube-icon.png" alt="YouTube" />
-    </a>
+  <div class="footer-container">
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+      <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
+    </div>
+    <p>&copy; 2025 Srpsko Udruženje Solna</p>
   </div>
-  <p>&copy; 2025 Srpsko Udruženje Solna. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>

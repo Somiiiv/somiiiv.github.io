@@ -2,38 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-key="events">Događaji - Srpsko Udruženje Solna</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="nav.events">Događaji - Srpsko Udruženje Solna</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- Header with Top Horizontal Navigation -->
-<header>
+<header class="site-header">
   <div class="header-container">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/logo.png" alt="Logo" />
-      </a>
+    <div class="crest-logo">
+      <img src="crest.png" alt="Crest Logo" />
     </div>
-    <nav class="top-nav">
+    <nav class="main-nav">
       <ul>
-        <li><a href="index.html" data-key="home">Početna</a></li>
-        <li><a href="about.html" data-key="about">O nama</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn" data-key="sections">Sekcije &#x25BE;</a>
-          <div class="dropdown-content">
-            <a href="folklor.html" data-key="folklore">Folklor</a>
-            <a href="karate.html" data-key="karate">Karate</a>
-          </div>
-        </li>
-        <li><a href="events.html" data-key="events">Događaji</a></li>
-        <li><a href="gallery.html" data-key="galleries">Galerije</a></li>
-        <li><a href="contact.html" data-key="contact">Kontakt</a></li>
+        <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+        <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+        <li><a href="sections.html" data-i18n="nav.sections">Sekcije</a></li>
+        <li><a href="events.html" data-i18n="nav.events">Događaji</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
       </ul>
     </nav>
     <div class="language-selector">
-      <select id="languageSelect" onchange="setLanguage(this.value)">
+      <select id="languageSelect">
         <option value="latin">Srpski</option>
         <option value="cyrillic">Српски</option>
         <option value="swedish">Svenska</option>
@@ -42,16 +32,35 @@
   </div>
 </header>
 
-<!-- Main Content -->
 <main>
-  <div class="container">
-    <h1 data-key="events">Događaji</h1>
-    <p data-key="eventsContent">
-      Ovde možete pronaći informacije o predstojećim događajima, festivalima i nastupima.
+  <section class="page-heading">
+    <h1 data-i18n="events.title">Događaji</h1>
+  </section>
+
+  <section class="content-section">
+    <p data-i18n="events.content">
+      Ovaj deo možete koristiti za listu predstojećih i prošlih događaja,
+      koncerata, proba i slično. Dodajte datume, lokacije i kratak opis svakog događaja.
     </p>
-  </div>
+    <!-- Example event list -->
+    <ul class="event-list">
+      <li><strong>20. mart 2025:</strong> Folklorna večer u Solni</li>
+      <li><strong>15. maj 2025:</strong> Koncert muzičke sekcije</li>
+    </ul>
+  </section>
 </main>
 
-<script src="js/script.js"></script>
+<footer>
+  <div class="footer-container">
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+      <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
+    </div>
+    <p>&copy; 2025 Srpsko Udruženje Solna</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

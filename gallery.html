@@ -2,28 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="nav.gallery">Gallery - Srpsko Udruženje Solna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="nav.gallery">Galerija - Srpsko Udruženje Solna</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
+<header class="site-header">
   <div class="header-container">
-    <div class="logo">
-      <img src="logo.png" alt="Srpsko Udruženje Solna Logo" />
+    <div class="crest-logo">
+      <img src="crest.png" alt="Crest Logo" />
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+        <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
+        <li><a href="sections.html" data-i18n="nav.sections">Sekcije</a></li>
+        <li><a href="events.html" data-i18n="nav.events">Događaji</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
       </ul>
     </nav>
     <div class="language-selector">
       <select id="languageSelect">
-        <option value="latin">Srpski (Latinica)</option>
-        <option value="cyrillic">Српски (Ћирилица)</option>
+        <option value="latin">Srpski</option>
+        <option value="cyrillic">Српски</option>
         <option value="swedish">Svenska</option>
       </select>
     </div>
@@ -31,39 +33,39 @@
 </header>
 
 <main>
-  <section id="gallery">
-    <h1 data-i18n="gallery.title">Gallery</h1>
-    <p data-i18n="gallery.description">
-      Explore our gallery featuring photos of performances and events.
+  <section class="page-heading">
+    <h1 data-i18n="gallery.title">Galerija</h1>
+  </section>
+
+  <section class="content-section">
+    <p data-i18n="gallery.content">
+      Pogledajte galeriju fotografija sa nastupa, događaja i drugih aktivnosti
+      našeg udruženja.
     </p>
     <div class="gallery-grid">
-      <!-- Replace these with your actual photos -->
+      <!-- Replace these with your actual images -->
       <div class="gallery-item">
-        <img src="photo1.jpg" alt="Performance Photo 1" />
+        <img src="photo1.jpg" alt="Photo 1" />
       </div>
       <div class="gallery-item">
-        <img src="photo2.jpg" alt="Performance Photo 2" />
+        <img src="photo2.jpg" alt="Photo 2" />
       </div>
       <div class="gallery-item">
-        <img src="photo3.jpg" alt="Performance Photo 3" />
+        <img src="photo3.jpg" alt="Photo 3" />
       </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="social-media">
-    <a href="https://facebook.com" target="_blank">
-      <img src="facebook-icon.png" alt="Facebook" />
-    </a>
-    <a href="https://instagram.com" target="_blank">
-      <img src="instagram-icon.png" alt="Instagram" />
-    </a>
-    <a href="https://youtube.com" target="_blank">
-      <img src="youtube-icon.png" alt="YouTube" />
-    </a>
+  <div class="footer-container">
+    <div class="social-media">
+      <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
+      <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+      <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
+    </div>
+    <p>&copy; 2025 Srpsko Udruženje Solna</p>
   </div>
-  <p>&copy; 2025 Srpsko Udruženje Solna. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>

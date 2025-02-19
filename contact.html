@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kontakt | Srpsko Udruženje Solna</title>
+  <meta name="description" content="Serbian Folklor Dance Association - Preserving cultural heritage through dance">
+  <title>Serbian Folklor Dance Association</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
   <!-- Same as index.html -->
-</header>
-
-<section class="contact">
-  <h2>Kontaktirajte nas</h2>
-  <form>
-    <input type="text" placeholder="Vaše ime" required>
-    <input type="email" placeholder="Vaša email adresa" required>
-    <textarea placeholder="Poruka" required></textarea>
-    <button type="submit">Pošalji</button>
-  </form>
-</section>
-
-<footer>
-  <p>&copy; 2023 Srpsko Udruženje Solna | Sva prava zadržana</p>
-</footer>
-</body>
-</html>
+  <!-- Same header/sidebar -->
+  <main class="main-content">
+    <section class="contact-section">
+      <h2 data-lang="contactTitle" class="section-title"></h2>
+      <div class="contact-info">
+        <p data-lang="contactText" class="contact-description"></p>
+        <ul class="contact-list">
+          <li data-lang="email"></li>
+          <li data-lang="phone"></li>
+          <li data-lang="address"></li>
+        </ul>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <svg><!-- Facebook SVG --></svg>
+            <span>Facebook</span>
+          </a>
+          <a href="#" class="social-link">
+            <svg><!-- Instagram SVG --></svg>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>

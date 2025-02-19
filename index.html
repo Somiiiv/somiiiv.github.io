@@ -1,77 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srpsko Udruženje Solna</title>
+    <meta name="description" content="Serbian Folklor Dance Association - Preserving cultural heritage through dance">
+    <title>Serbian Folklor Dance Association</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Header Section -->
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="Srpsko Udruženje Solna Logo">
+<!-- Sidebar Navigation -->
+<nav class="sidebar">
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="Association Logo" class="logo">
     </div>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#gallery">Galleries</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
+
+    <ul class="nav-links">
+        <li><a href="index.html" data-lang="home" class="nav-link active">Home</a></li>
+        <li><a href="about.html" data-lang="about" class="nav-link">About Us</a></li>
+        <li><a href="gallery.html" data-lang="gallery" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" data-lang="contact" class="nav-link">Contact</a></li>
+    </ul>
+
     <div class="language-switcher">
-        <select id="language-selector">
-            <option value="sr-latin">Srpski (Latin)</option>
-            <option value="sr-cyrillic">Srpski (Ćirilica)</option>
-            <option value="sv">Svenska</option>
-        </select>
+        <button class="lang-btn" onclick="switchLanguage('sr-Latn')">SR (Latin)</button>
+        <button class="lang-btn" onclick="switchLanguage('sr-Cyrl')">SR (Cyrillic)</button>
+        <button class="lang-btn" onclick="switchLanguage('sv')">SV</button>
     </div>
-</header>
+</nav>
 
-<!-- Home Section -->
-<section id="home" class="hero">
-    <h1>Welcome to Srpsko Udruženje Solna</h1>
-    <p>Promoting Serbian folklore and culture through dance.</p>
-    <a href="#about" class="btn">Learn More</a>
-</section>
-
-<!-- About Us Section -->
-<section id="about" class="about">
-    <h2>About Us</h2>
-    <p>We are a group dedicated to preserving and promoting Serbian folklore traditions.</p>
-    <!-- Add more content here -->
-</section>
-
-<!-- Gallery Section -->
-<section id="gallery" class="gallery">
-    <h2>Galleries</h2>
-    <div class="gallery-grid">
-        <img src="image1.jpg" alt="Performance Photo">
-        <img src="image2.jpg" alt="Workshop Photo">
-        <!-- Add more images here -->
-    </div>
-</section>
-
-<!-- Contact Us Section -->
-<section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Message"></textarea>
-        <button type="submit">Send</button>
-    </form>
-    <div class="social-media">
-        <a href="https://facebook.com/yourpage" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-        <a href="https://instagram.com/yourpage" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-    </div>
-</section>
-
-<!-- Footer Section -->
-<footer>
-    <p>&copy; 2023 Srpsko Udruženje Solna. All rights reserved.</p>
-</footer>
+<!-- Main Content -->
+<main class="main-content">
+    <section class="hero">
+        <h1 data-lang="welcome" class="hero-title"></h1>
+        <p data-lang="intro" class="hero-subtitle"></p>
+    </section>
+</main>
 
 <script src="script.js"></script>
 </body>

@@ -2,78 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title data-i18n="nav.home">Početna - Srpsko Udruženje Solna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Srpsko Udruženje Solna - Home</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- HEADER -->
-<header class="site-header">
-    <div class="header-container">
-        <!-- Crest/Logo on the left -->
-        <div class="crest-logo">
-            <img src="crest.png" alt="Crest Logo" />
+<div class="container">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+            <button id="closeSidebar" class="close-btn">&times;</button>
         </div>
-
-        <!-- Navigation in the center -->
-        <nav class="main-nav">
+        <nav class="nav-menu">
             <ul>
-                <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
-                <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
-                <li><a href="sections.html" data-i18n="nav.sections">Sekcije</a></li>
-                <li><a href="events.html" data-i18n="nav.events">Događaji</a></li>
-                <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+                <li><a href="index.html" data-key="home">Home</a></li>
+                <li><a href="about.html" data-key="about">About Us</a></li>
+                <li><a href="gallery.html" data-key="gallery">Gallery</a></li>
+                <li><a href="contact.html" data-key="contact">Contact</a></li>
             </ul>
         </nav>
-
-        <!-- Language Selector on the right -->
         <div class="language-selector">
-            <select id="languageSelect">
-                <option value="latin">Srpski</option>
-                <option value="cyrillic">Српски</option>
-                <option value="swedish">Svenska</option>
-            </select>
+            <p data-key="language">Language:</p>
+            <button onclick="setLanguage('sr-latn')">SR Latin</button>
+            <button onclick="setLanguage('sr-cyrl')">SR Cyrillic</button>
+            <button onclick="setLanguage('sv')">Swedish</button>
         </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="header">
+            <button id="openSidebar" class="hamburger">&#9776;</button>
+            <h1 data-key="welcome">Welcome to Srpsko Udruženje Solna</h1>
+        </header>
+        <section class="content">
+            <p data-key="homeContent">This is the home page content.</p>
+        </section>
     </div>
-</header>
-
-<!-- MAIN CONTENT -->
-<main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 data-i18n="home.title">Dobrodošli u Srpsko Udruženje Solna</h1>
-            <p data-i18n="home.subtitle">
-                Mesto gde negujemo tradiciju, folklor i zajedništvo.
-            </p>
-            <!-- Example button (optional) -->
-            <a href="about.html" class="btn-cta" data-i18n="home.learnMore">Saznajte više</a>
-        </div>
-    </section>
-
-    <!-- Example Intro Section -->
-    <section class="intro-section">
-        <h2 data-i18n="home.introTitle">Naša misija</h2>
-        <p data-i18n="home.introText">
-            Ovde ide kratak uvod o udruženju, njegovoj misiji i ciljevima.
-            Možete prilagoditi tekst, dodati slike ili druge elemente.
-        </p>
-    </section>
-</main>
-
-<!-- FOOTER -->
-<footer>
-    <div class="footer-container">
-        <div class="social-media">
-            <!-- Replace with your social media links & icons -->
-            <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
-            <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
-            <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
-        </div>
-        <p>&copy; 2025 Srpsko Udruženje Solna</p>
-    </div>
-</footer>
+</div>
 
 <script src="script.js"></script>
 </body>

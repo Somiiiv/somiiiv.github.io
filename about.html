@@ -2,60 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title data-i18n="nav.about">O nama - Srpsko Udruženje Solna</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Srpsko Udruženje Solna - About Us</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="header-container">
-    <div class="crest-logo">
-      <img src="crest.png" alt="Crest Logo" />
+<div class="container">
+  <!-- Sidebar (Same as in index.html) -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2>Menu</h2>
+      <button id="closeSidebar" class="close-btn">&times;</button>
     </div>
-    <nav class="main-nav">
+    <nav class="nav-menu">
       <ul>
-        <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
-        <li><a href="about.html" data-i18n="nav.about">O nama</a></li>
-        <li><a href="sections.html" data-i18n="nav.sections">Sekcije</a></li>
-        <li><a href="events.html" data-i18n="nav.events">Događaji</a></li>
-        <li><a href="gallery.html" data-i18n="nav.gallery">Galerija</a></li>
-        <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+        <li><a href="index.html" data-key="home">Home</a></li>
+        <li><a href="about.html" data-key="about">About Us</a></li>
+        <li><a href="gallery.html" data-key="gallery">Gallery</a></li>
+        <li><a href="contact.html" data-key="contact">Contact</a></li>
       </ul>
     </nav>
     <div class="language-selector">
-      <select id="languageSelect">
-        <option value="latin">Srpski</option>
-        <option value="cyrillic">Српски</option>
-        <option value="swedish">Svenska</option>
-      </select>
+      <p data-key="language">Language:</p>
+      <button onclick="setLanguage('sr-latn')">SR Latin</button>
+      <button onclick="setLanguage('sr-cyrl')">SR Cyrillic</button>
+      <button onclick="setLanguage('sv')">Swedish</button>
     </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <header class="header">
+      <button id="openSidebar" class="hamburger">&#9776;</button>
+      <h1 data-key="aboutTitle">About Us</h1>
+    </header>
+    <section class="content">
+      <p data-key="aboutContent">Information about our club.</p>
+    </section>
   </div>
-</header>
-
-<main>
-  <section class="page-heading">
-    <h1 data-i18n="about.title">O nama</h1>
-  </section>
-
-  <section class="content-section">
-    <p data-i18n="about.content">
-      Ovde možete pisati o istoriji i razvoju vašeg udruženja,
-      kako je nastalo i čime se ponosite. Dodajte fotografije ili video klipove
-      radi atraktivnijeg izgleda.
-    </p>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-container">
-    <div class="social-media">
-      <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
-      <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
-      <a href="https://youtube.com" target="_blank"><img src="youtube.png" alt="YouTube" /></a>
-    </div>
-    <p>&copy; 2025 Srpsko Udruženje Solna</p>
-  </div>
-</footer>
+</div>
 
 <script src="script.js"></script>
 </body>

@@ -1,29 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const languageSelect = document.getElementById('languageSelect');
-    const elements = document.querySelectorAll('[data-i18n]');
+document.getElementById('language-selector').addEventListener('change', function () {
+    const selectedLanguage = this.value;
 
-    // Load saved language from localStorage or default to sr-Latn
-    const savedLang = localStorage.getItem('language') || 'sr-Latn';
-    loadLanguage(savedLang);
-    languageSelect.value = savedLang;
-
-    languageSelect.addEventListener('change', (e) => {
-        const selectedLang = e.target.value;
-        loadLanguage(selectedLang);
-        localStorage.setItem('language', selectedLang);
-    });
-
-    async function loadLanguage(lang) {
-        const response = await fetch(`lang/${lang}.json`);
-        const translations = await response.json();
-
-        document.querySelectorAll('[data-i18n]').forEach((element) => {
-            const key = element.dataset.i18n;
-            if (translations[key]) {
-                element.textContent = translations[key];
-            }
-        });
-
-        document.documentElement.lang = lang;
+    if (selectedLanguage === 'sr-latin') {
+        document.querySelector('h1').textContent = 'Dobrodošli u Srpsko Udruženje Solna';
+        document.querySelector('.hero p').textContent = 'Promovisanje srpske folklorno-tradicionalne kulture kroz ples.';
+        document.querySelector('.btn').textContent = 'Saznaj više';
+    } else if (selectedLanguage === 'sr-cyrillic') {
+        document.querySelector('h1').textContent = 'Добродошли у Српско Удружење Солна';
+        document.querySelector('.hero p').textContent = 'Промовисање српске фолклорно-традиционалне културе кроз плес.';
+        document.querySelector('.btn').textContent = 'Сазнај више';
+    } else if (selectedLanguage === 'sv') {
+        document.querySelector('h1').textContent = 'Välkommen till Serbiska Föreningen Solna';
+        document.querySelector('.hero p').textContent = 'Att främja serbisk folklör och kultur genom dans.';
+        document.querySelector('.btn').textContent = 'Läs mer';
     }
 });

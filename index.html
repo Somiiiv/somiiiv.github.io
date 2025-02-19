@@ -1,49 +1,78 @@
 <!DOCTYPE html>
-<html lang="sr-Latn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srpsko Udruženje Solna</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-<div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <h2 data-i18n="sidebar_title">Srpsko Udruženje Solna</h2>
-            <div class="language-switcher">
-                <select id="languageSelect" data-i18n="language_switcher">
-                    <option value="sr-Latn">Srpski (Latinica)</option>
-                    <option value="sr-Cyr">Srpski (Ћирилица)</option>
-                    <option value="sv">Svenska</option>
-                </select>
-            </div>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="#hero" data-i18n="nav_home">Početna</a></li>
-                <li><a href="about.html" data-i18n="nav_about">O nama</a></li>
-                <li><a href="gallery.html" data-i18n="nav_gallery">Galerija</a></li>
-                <li><a href="contact.html" data-i18n="nav_contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </aside>
+<!-- Header Section -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Srpsko Udruženje Solna Logo">
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Galleries</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="language-switcher">
+        <select id="language-selector">
+            <option value="sr-latin">Srpski (Latin)</option>
+            <option value="sr-cyrillic">Srpski (Ćirilica)</option>
+            <option value="sv">Svenska</option>
+        </select>
+    </div>
+</header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="hero" id="hero">
-            <h1 data-i18n="hero_title">Dobrodošli u Srpsko Udruženje Solna</h1>
-            <p data-i18n="hero_subtitle">Pridružite nam se na putovanju koji slavi srpsku kulturu</p>
-            <a href="#about" class="btn" data-i18n="hero_cta">Saznaj više</a>
-        </section>
-        <!-- Add other sections here -->
-    </main>
-</div>
+<!-- Home Section -->
+<section id="home" class="hero">
+    <h1>Welcome to Srpsko Udruženje Solna</h1>
+    <p>Promoting Serbian folklore and culture through dance.</p>
+    <a href="#about" class="btn">Learn More</a>
+</section>
 
+<!-- About Us Section -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a group dedicated to preserving and promoting Serbian folklore traditions.</p>
+    <!-- Add more content here -->
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <h2>Galleries</h2>
+    <div class="gallery-grid">
+        <img src="image1.jpg" alt="Performance Photo">
+        <img src="image2.jpg" alt="Workshop Photo">
+        <!-- Add more images here -->
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <div class="social-media">
+        <a href="https://facebook.com/yourpage" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="https://instagram.com/yourpage" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
+</section>
+
+<!-- Footer Section -->
 <footer>
-    <p data-i18n="footer_text">© 2024 Srpsko Udruženje Solna</p>
+    <p>&copy; 2023 Srpsko Udruženje Solna. All rights reserved.</p>
 </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

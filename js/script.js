@@ -1,6 +1,10 @@
 // Language Texts
 const texts = {
     "sr-Latn": {
+        home: "Početna",
+        about: "O Nama",
+        gallery: "Galerija",
+        contact: "Kontakt",
         welcome: "Dobrodošli u našu asocijaciju za srpske folklorske igre",
         intro: "Posvećeni smo očuvanju i promovisanju srpskih folklornih tradicija kroz igru.",
         aboutTitle: "O Nama",
@@ -10,10 +14,13 @@ const texts = {
         contactText: "Slobodno nas kontaktirajte za pitanja ili saradnju.",
         email: "Email: example@serbiandance.com",
         phone: "Telefon: +46 123 456 789",
-        address: "Adresa: 123 Dance Street, Stockholm, Sweden",
-        footerText: "© 2023 Asocijacija za srpske folklorske igre. Sva prava zadržana."
+        address: "Adresa: 123 Dance Street, Stockholm, Sweden"
     },
     "sr-Cyrl": {
+        home: "Почетна",
+        about: "О Нама",
+        gallery: "Галерија",
+        contact: "Контакт",
         welcome: "Добродошли у нашу асоцијацију за српске фолклорне игре",
         intro: "Посвећени смо очувању и промовисању српских фолклорних традиција кроз игру.",
         aboutTitle: "О Нама",
@@ -23,10 +30,13 @@ const texts = {
         contactText: "Слободно нас контактирајте за питања или сарадњу.",
         email: "Емаил: example@serbiandance.com",
         phone: "Телефон: +46 123 456 789",
-        address: "Адреса: 123 Dance Street, Stockholm, Sweden",
-        footerText: "© 2023 Асоцијација за српске фолклорне игре. Сва права задржана."
+        address: "Адреса: 123 Dance Street, Stockholm, Sweden"
     },
     "sv": {
+        home: "Hem",
+        about: "Om Oss",
+        gallery: "Galleri",
+        contact: "Kontakt",
         welcome: "Välkommen till vår serbiska folkloredansförening",
         intro: "Vi är dedikerade till att bevara och främja serbiska folkloretraditioner genom dans.",
         aboutTitle: "Om Oss",
@@ -36,8 +46,7 @@ const texts = {
         contactText: "Tveka inte att kontakta oss för frågor eller samarbeten.",
         email: "E-post: example@serbiandance.com",
         phone: "Telefon: +46 123 456 789",
-        address: "Adress: 123 Dance Street, Stockholm, Sweden",
-        footerText: "© 2023 Serbiska Folkloredansföreningen. Alla rättigheter förbehållna."
+        address: "Adress: 123 Dance Street, Stockholm, Sweden"
     }
 };
 
@@ -45,7 +54,9 @@ const texts = {
 function switchLanguage(lang) {
     document.querySelectorAll("[data-lang]").forEach(element => {
         const key = element.getAttribute("data-lang");
-        element.textContent = texts[lang][key];
+        if (texts[lang][key]) {
+            element.textContent = texts[lang][key];
+        }
     });
 }
 

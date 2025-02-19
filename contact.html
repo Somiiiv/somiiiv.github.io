@@ -1,47 +1,28 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Serbian Folklor Dance Association</title>
+  <title>Kontakt | Srpsko Udruženje Solna</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Sidebar -->
-<div class="sidebar">
-  <div class="logo">
-    <img src="assets/logo.png" alt="Association Logo">
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html" data-lang="home">Home</a></li>
-      <li><a href="about.html" data-lang="about">About Us</a></li>
-      <li><a href="gallery.html" data-lang="gallery">Gallery</a></li>
-      <li><a href="contact.html" data-lang="contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="language-switcher">
-    <button onclick="switchLanguage('sr-Latn')">SR (Latin)</button>
-    <button onclick="switchLanguage('sr-Cyrl')">SR (Cyrillic)</button>
-    <button onclick="switchLanguage('sv')">SV</button>
-  </div>
-</div>
+<header>
+  <!-- Same as index.html -->
+</header>
 
-<!-- Main Content -->
-<div class="main-content">
-  <h1 data-lang="contactTitle">Contact Us</h1>
-  <p data-lang="contactText">Feel free to reach out to us for inquiries or collaborations.</p>
-  <ul>
-    <li data-lang="email">Email: example@serbiandance.com</li>
-    <li data-lang="phone">Phone: +46 123 456 789</li>
-    <li data-lang="address">Address: 123 Dance Street, Stockholm, Sweden</li>
-  </ul>
-  <div class="social-media">
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-  </div>
-</div>
+<section class="contact">
+  <h2>Kontaktirajte nas</h2>
+  <form>
+    <input type="text" placeholder="Vaše ime" required>
+    <input type="email" placeholder="Vaša email adresa" required>
+    <textarea placeholder="Poruka" required></textarea>
+    <button type="submit">Pošalji</button>
+  </form>
+</section>
 
-<script src="script.js"></script>
+<footer>
+  <p>&copy; 2023 Srpsko Udruženje Solna | Sva prava zadržana</p>
+</footer>
 </body>
 </html>

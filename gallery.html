@@ -1,45 +1,31 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery - Serbian Folklor Dance Association</title>
+  <title>Galerija | Srpsko Udruženje Solna</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Sidebar -->
-<div class="sidebar">
-  <div class="logo">
-    <img src="assets/logo.png" alt="Association Logo">
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html" data-lang="home">Home</a></li>
-      <li><a href="about.html" data-lang="about">About Us</a></li>
-      <li><a href="gallery.html" data-lang="gallery">Gallery</a></li>
-      <li><a href="contact.html" data-lang="contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="language-switcher">
-    <button onclick="switchLanguage('sr-Latn')">SR (Latin)</button>
-    <button onclick="switchLanguage('sr-Cyrl')">SR (Cyrillic)</button>
-    <button onclick="switchLanguage('sv')">SV</button>
-  </div>
-</div>
+<header>
+  <!-- Same as index.html -->
+</header>
 
-<!-- Main Content -->
-<div class="main-content">
-  <h1 data-lang="galleryTitle">Gallery</h1>
+<section class="gallery">
+  <h2>Galerija</h2>
   <div class="gallery-grid">
-    <img src="assets/photo1.jpg" alt="Performance Photo 1">
-    <img src="assets/photo2.jpg" alt="Performance Photo 2">
-    <video controls>
-      <source src="assets/video1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/300" alt="Folklor performans">
+    </div>
+    <div class="gallery-item">
+      <img src="https://via.placeholder.com/300" alt="Folklor performans">
+    </div>
+    <!-- Repeat for more images -->
   </div>
-</div>
+</section>
 
-<script src="script.js"></script>
+<footer>
+  <p>&copy; 2023 Srpsko Udruženje Solna | Sva prava zadržana</p>
+</footer>
 </body>
 </html>

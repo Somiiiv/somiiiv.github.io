@@ -1,29 +1,72 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Serbian Folklor Dance Association - Preserving cultural heritage through dance">
-  <title>Serbian Folklor Dance Association</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="nav.gallery">Gallery - Srpsko Udruženje Solna</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="logo.png" alt="Srpsko Udruženje Solna Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="language-selector">
+      <select id="languageSelect">
+        <option value="latin">Srpski (Latinica)</option>
+        <option value="cyrillic">Српски (Ћирилица)</option>
+        <option value="swedish">Svenska</option>
+      </select>
+    </div>
+  </div>
+</header>
 
-<!-- Same header/sidebar -->
-<!-- Same header/sidebar -->
-<main class="main-content">
-  <section class="gallery-section">
-    <h2 data-lang="galleryTitle" class="section-title"></h2>
-    <div class="media-grid">
-      <div class="media-card">
-        <img src="assets/photo1.jpg" alt="Performance" class="gallery-image">
+<main>
+  <section id="gallery">
+    <h1 data-i18n="gallery.title">Gallery</h1>
+    <p data-i18n="gallery.description">
+      Explore our gallery featuring photos of performances and events.
+    </p>
+    <div class="gallery-grid">
+      <!-- Replace these placeholders with your actual photos -->
+      <div class="gallery-item">
+        <img src="photo1.jpg" alt="Performance Photo 1" />
       </div>
-      <div class="media-card">
-        <video controls class="gallery-video">
-          <source src="assets/video1.mp4" type="video/mp4">
-        </video>
+      <div class="gallery-item">
+        <img src="photo2.jpg" alt="Performance Photo 2" />
       </div>
+      <div class="gallery-item">
+        <img src="photo3.jpg" alt="Performance Photo 3" />
+      </div>
+      <!-- Add more gallery items as needed -->
     </div>
   </section>
 </main>
+
+<footer>
+  <div class="social-media">
+    <a href="https://facebook.com" target="_blank">
+      <img src="facebook-icon.png" alt="Facebook" />
+    </a>
+    <a href="https://instagram.com" target="_blank">
+      <img src="instagram-icon.png" alt="Instagram" />
+    </a>
+    <a href="https://youtube.com" target="_blank">
+      <img src="youtube-icon.png" alt="YouTube" />
+    </a>
+  </div>
+  <p>&copy; 2025 Srpsko Udruženje Solna. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

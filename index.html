@@ -1,81 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title data-key="title">Srpsko Udruženje Solna</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/png" href="images/udruzenje.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serbian Folklor Dance Association</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Header with Hamburger Menu -->
+<!-- Header -->
 <header>
-    <div class="header-container">
-        <!-- Hamburger Button -->
-        <button class="hamburger" onclick="toggleSidebar()">&#9776;</button>
-        <!-- Logo -->
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/udruzenje.png" alt="Logo" />
-            </a>
-        </div>
-        <!-- Top Navigation Menu -->
-        <nav class="top-nav">
-            <ul>
-                <li><a href="index.html" data-key="home">Početna</a></li>
-                <li><a href="about.html" data-key="about">O nama</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn" data-key="sections">Sekcije &#x25BE;</a>
-                    <div class="dropdown-content">
-                        <a href="folklor.html" data-key="folklore">Folklor</a>
-                        <a href="karate.html" data-key="karate">Karate</a>
-                    </div>
-                </li>
-                <li><a href="events.html" data-key="events">Događaji</a></li>
-                <li><a href="galleries.html" data-key="galleries">Galerije</a></li>
-                <li><a href="contact.html" data-key="contact">Kontakt</a></li>
-            </ul>
-        </nav>
-        <!-- Language Selector -->
-        <div class="language-selector">
-            <select id="languageSelect" onchange="setLanguage(this.value)">
-                <option value="latin">Srpski</option>
-                <option value="cyrillic">Српски</option>
-                <option value="swedish">Svenska</option>
-            </select>
-        </div>
+    <div class="logo">
+        <img src="assets/logo.png" alt="Association Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home" data-lang="home">Home</a></li>
+            <li><a href="#about" data-lang="about">About Us</a></li>
+            <li><a href="#gallery" data-lang="gallery">Gallery</a></li>
+            <li><a href="#contact" data-lang="contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('sr-Latn')">SR (Latin)</button>
+        <button onclick="switchLanguage('sr-Cyrl')">SR (Cyrillic)</button>
+        <button onclick="switchLanguage('sv')">SV</button>
     </div>
 </header>
 
-<!-- Sidebar -->
-<div id="sidebar" class="sidebar">
-    <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
-    <nav class="sidebar-nav">
-        <ul>
-            <li><a href="index.html" data-key="home">Početna</a></li>
-            <li><a href="about.html" data-key="about">O nama</a></li>
-            <li class="sidebar-dropdown">
-                <a href="#" data-key="sections">Sekcije ▾</a>
-                <div class="sidebar-dropdown-content">
-                    <a href="folklor.html" data-key="folklore">Folklor</a>
-                    <a href="karate.html" data-key="karate">Karate</a>
-                </div>
-            </li>
-            <li><a href="events.html" data-key="events">Događaji</a></li>
-            <li><a href="galleries.html" data-key="galleries">Galerije</a></li>
-            <li><a href="contact.html" data-key="contact">Kontakt</a></li>
-        </ul>
-    </nav>
-</div>
+<!-- Home Section -->
+<section id="home" class="section">
+    <h1 data-lang="welcome">Welcome to Our Serbian Folklor Dance Association</h1>
+    <p data-lang="intro">We are dedicated to preserving and promoting Serbian folkloric traditions through dance.</p>
+</section>
 
-<!-- Main Content -->
-<main>
-    <div class="container">
-        <h1 data-key="welcome">Srpsko udruženje Solna</h1>
-        <p data-key="homeContent"></p>
+<!-- About Us Section -->
+<section id="about" class="section">
+    <h2 data-lang="aboutTitle">About Us</h2>
+    <p data-lang="aboutText">Our association was founded in [YEAR] with the goal of preserving Serbian folkloric dance traditions. We organize performances, workshops, and cultural events to share our heritage with the community.</p>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="section">
+    <h2 data-lang="galleryTitle">Gallery</h2>
+    <div class="gallery-grid">
+        <img src="assets/photo1.jpg" alt="Performance Photo 1">
+        <img src="assets/photo2.jpg" alt="Performance Photo 2">
+        <video controls>
+            <source src="assets/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-</main>
+</section>
 
-<script src="js/script.js"></script>
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <h2 data-lang="contactTitle">Contact Us</h2>
+    <p data-lang="contactText">Feel free to reach out to us for inquiries or collaborations.</p>
+    <ul>
+        <li data-lang="email">Email: example@serbiandance.com</li>
+        <li data-lang="phone">Phone: +46 123 456 789</li>
+        <li data-lang="address">Address: 123 Dance Street, Stockholm, Sweden</li>
+    </ul>
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p data-lang="footerText">&copy; 2023 Serbian Folklor Dance Association. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

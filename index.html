@@ -1,45 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr-Latn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Srpsko Udruženje Solna</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-<header>
-    <nav>
-        <a href="/" class="logo">Srpsko Udruženje Solna</a>
-        <ul>
-            <li><a href="index.html">Početna</a></li>
-            <li><a href="about.html">O nama</a></li>
-            <li><a href="gallery.html">Galerija</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-        <div class="social">
-            <a href="your-instagram-url"><i class="fab fa-instagram"></i></a>
-            <a href="your-facebook-url"><i class="fab fa-facebook"></i></a>
-            <a href="your-youtube-url"><i class="fab fa-youtube"></i></a>
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2 data-i18n="sidebar_title">Srpsko Udruženje Solna</h2>
+            <div class="language-switcher">
+                <select id="languageSelect">
+                    <option value="sr-Latn">Srpski (Latinica)</option>
+                    <option value="sr-Cyr">Srpski (Ћирилица)</option>
+                    <option value="sv">Svenska</option>
+                </select>
+            </div>
         </div>
-    </nav>
-</header>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html" data-i18n="nav_home">Početna</a></li>
+                <li><a href="about.html" data-i18n="nav_about">O nama</a></li>
+                <li><a href="gallery.html" data-i18n="nav_gallery">Galerija</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-<section class="hero">
-    <h1>Dobrodošli u Srpsko Udruženje Solna</h1>
-    <p>Pridružite nam se na putovanju koji slavi srpsku kulturu i tradiciju</p>
-    <a href="#about" class="btn">Saznaj više</a>
-</section>
-
-<section id="about" class="about-section">
-    <div class="content">
-        <h2>O nama</h2>
-        <p>Srpsko Udruženje Solna je skup entuzijasta srpske folklorne umetnosti koji se bavimo održavanjem i pokazivanjem naše bojovite baštine. Kroz plesove, pesme i tradicije nakon prenosimo kulturu naših otac na buduće generacije.</p>
-    </div>
-</section>
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h1 data-i18n="hero_title">Dobrodošli u Srpsko Udruženje Solna</h1>
+            <p data-i18n="hero_subtitle">Pridružite nam se na putovanju koji slavi srpsku kulturu</p>
+            <a href="#about" class="btn" data-i18n="hero_cta">Saznaj više</a>
+        </section>
+        <!-- Add other sections here -->
+    </main>
+</div>
 
 <footer>
-    <p>&copy; 2023 Srpsko Udruženje Solna | Sva prava zadržana</p>
+    <p data-i18n="footer_text">© 2024 Srpsko Udruženje Solna</p>
 </footer>
 </body>
 </html>

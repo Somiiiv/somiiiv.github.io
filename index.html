@@ -2,60 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Srpsko Udruženje Solna</title>
+    <title>Srpsko Udruženje Solna - Početna</title>
+    <!-- Include Google Fonts -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!-- HEADER (sticky nav) -->
 <header>
-    <div class="header-container">
-        <div class="logo">
-            <!-- Replace with your actual logo file -->
-            <img src="logo.png" alt="Srpsko Udruženje Solna Logo" />
+    <div class="nav-container">
+        <!-- Left: Logo / Coat of Arms -->
+        <div class="nav-logo">
+            <!-- Replace with your actual coat of arms or logo -->
+            <img src="coat-of-arms.png" alt="Logo" />
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
-                <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact Us</a></li>
+
+        <!-- Center: Navigation Links -->
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="o-nama.html">O nama</a></li>
+                <li><a href="sekcije.html">Sekcije</a></li>
+                <li><a href="dogadjaji.html">Događaji</a></li>
+                <li><a href="galerije.html">Galerije</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
             </ul>
         </nav>
-        <div class="language-selector">
-            <select id="languageSelect">
-                <option value="latin">Srpski (Latinica)</option>
-                <option value="cyrillic">Српски (Ћирилица)</option>
+
+        <!-- Right: Language Selector -->
+        <div class="nav-lang">
+            <select name="language" id="languageSelect">
+                <option value="srpski">Srpski</option>
+                <option value="cyrillic">Српски</option>
                 <option value="swedish">Svenska</option>
             </select>
         </div>
     </div>
 </header>
 
+<!-- MAIN CONTENT -->
 <main>
-    <section id="home" class="hero">
-        <h1 data-i18n="home.title">Welcome to Srpsko Udruženje Solna</h1>
-        <p data-i18n="home.description">
-            We celebrate Serbian folklore dance and culture.
+    <section class="hero">
+        <h1>Dobrodošli na našu stranicu</h1>
+        <p>Ovde možete kratko opisati čime se vaše udruženje bavi.</p>
+    </section>
+
+    <section class="content">
+        <h2>Početna - Glavni sadržaj</h2>
+        <p>
+            Ovdе stavite glavni tekst i informacije o vašem udruženju, novostima,
+            aktivnostima, itd.
         </p>
     </section>
 </main>
 
+<!-- FOOTER -->
 <footer>
-    <div class="social-media">
-        <!-- Replace these with your actual social media icons and links -->
-        <a href="https://facebook.com" target="_blank">
-            <img src="facebook-icon.png" alt="Facebook" />
-        </a>
-        <a href="https://instagram.com" target="_blank">
-            <img src="instagram-icon.png" alt="Instagram" />
-        </a>
-        <a href="https://youtube.com" target="_blank">
-            <img src="youtube-icon.png" alt="YouTube" />
-        </a>
-    </div>
-    <p>&copy; 2025 Srpsko Udruženje Solna. All rights reserved.</p>
+    <p>&copy; 2025 Srpsko Udruženje Solna. Sva prava zadržana.</p>
 </footer>
-
-<script src="script.js"></script>
 </body>
 </html>

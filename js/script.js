@@ -1,84 +1,55 @@
-// Wait for the DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-    const sidebar = document.getElementById('sidebar');
-    const openBtn = document.getElementById('openSidebar');
-    const closeBtn = document.getElementById('closeSidebar');
+// Initialize Website
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const menuToggle = document.createElement('div');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.body.prepend(menuToggle);
 
-    if (openBtn) {
-        openBtn.addEventListener('click', function() {
-            sidebar.classList.add('open');
+    menuToggle.addEventListener('click', () => {
+        document.querySelector('.sidebar').classList.toggle('active');
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
-    }
+    });
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-            sidebar.classList.remove('open');
-        });
-    }
-
-    // Load saved language preference or default to Serbian Latin
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'sr-latn';
-    setLanguage(savedLanguage);
-});
-
-function setLanguage(lang) {
-    localStorage.setItem('selectedLanguage', lang);
-
-    // Define translation texts for each language.
-    const translations = {
-        'sr-latn': {
-            home: 'Početna',
-            about: 'O nama',
-            contact: 'Kontakt',
-            gallery: 'Galerija',
-            language: 'Jezik:',
-            welcome: 'Dobrodošli u Srpsko Udruženje Solna',
-            homeContent: 'Ovo je sadržaj početne stranice.',
-            aboutTitle: 'O nama',
-            aboutContent: 'Informacije o našem udruženju.',
-            contactTitle: 'Kontakt',
-            contactContent: 'Kontaktirajte nas na email@example.com',
-            galleryTitle: 'Galerija',
-            galleryContent: 'Sadržaj galerije.'
+    // Language System
+    const languageSwitcher = {
+        currentLang: 'sr-Latn',
+        texts: {
+            'sr-Latn': { /* Add translations */ },
+            'sr-Cyrl': { /* Add translations */ },
+            'sv': { /* Add translations */ }
         },
-        'sr-cyrl': {
-            home: 'Почетна',
-            about: 'О нама',
-            contact: 'Контакт',
-            gallery: 'Галерија',
-            language: 'Језик:',
-            welcome: 'Добродошли у Српско Удружење Солна',
-            homeContent: 'Ово је садржај почетне странице.',
-            aboutTitle: 'О нама',
-            aboutContent: 'Информације о нашем удружењу.',
-            contactTitle: 'Контакт',
-            contactContent: 'Контактирајте нас на email@example.com',
-            galleryTitle: 'Галерија',
-            galleryContent: 'Садржај галерије.'
-        },
-        'sv': {
-            home: 'Hem',
-            about: 'Om oss',
-            contact: 'Kontakt',
-            gallery: 'Galleri',
-            language: 'Språk:',
-            welcome: 'Välkommen till Srpsko Udruženje Solna',
-            homeContent: 'Detta är hemsidans innehåll.',
-            aboutTitle: 'Om oss',
-            aboutContent: 'Information om vår förening.',
-            contactTitle: 'Kontakt',
-            contactContent: 'Kontakta oss på email@example.com',
-            galleryTitle: 'Galleri',
-            galleryContent: 'Galleriinnehåll.'
+        init() {
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                el.textContent = this.texts[this.currentLang][el.dataset.lang];
+            });
         }
     };
 
-    // Update all elements that have a data-key attribute
-    const elements = document.querySelectorAll('[data-key]');
-    elements.forEach(el => {
-        const key = el.getAttribute('data-key');
-        if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
+    languageSwitcher.init();
+});
+
+// Intersection Observer Animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
         }
     });
-}
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = 'translateY(30px)';
+    observer.observe(el);
+});

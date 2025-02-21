@@ -3,355 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serbian Folklor Excellence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Serbian Folklore Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #B71C1C;
-            --secondary: #D32F2F;
-            --gold: #FFD700;
-            --dark: #2D2424;
-            --light: #F5F5F5;
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--light);
-            color: var(--dark);
-            overflow-x: hidden;
-        }
-
-        /* Premium Navigation */
-        .sidebar {
-            width: 280px;
-            height: 100vh;
-            position: fixed;
-            background: linear-gradient(45deg, var(--dark), var(--primary));
-            padding: 2rem;
-            box-shadow: 8px 0 30px rgba(0, 0, 0, 0.1);
-            transform: translateX(-100%);
-            transition: var(--transition);
-            z-index: 1000;
-        }
-
-        .sidebar.active {
-            transform: translateX(0);
-        }
-
-        .logo-container {
-            position: relative;
-            margin-bottom: 3rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .logo-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-        }
-
-        .logo {
-            width: 100%;
-            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
-        }
-
-        /* Navigation Links */
-        .nav-links {
-            list-style: none;
-            position: relative;
-        }
-
-        .nav-link {
-            position: relative;
-            color: var(--light);
-            text-decoration: none;
-            padding: 1rem 1.5rem;
-            margin: 1rem 0;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            transition: var(--transition);
-            overflow: hidden;
-        }
-
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: 0.5s;
-        }
-
-        .nav-link:hover::before {
-            left: 100%;
-        }
-
-        .nav-link i {
-            margin-right: 1rem;
-            font-size: 1.2rem;
-            color: var(--gold);
-        }
-
-        /* Language Switcher */
-        .language-switcher {
-            position: absolute;
-            bottom: 2rem;
-            left: 2rem;
-            right: 2rem;
-        }
-
-        .lang-btn {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 0.5rem 0;
-            background: rgba(255,255,255,0.1);
-            border: 2px solid var(--gold);
-            color: var(--light);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: var(--transition);
-            backdrop-filter: blur(5px);
-        }
-
-        .lang-btn:hover {
-            background: var(--gold);
-            color: var(--dark);
-            transform: translateY(-3px);
-        }
-
-        /* Main Content */
-        .main-content {
-            margin-left: 280px;
-            padding: 4rem;
-            min-height: 100vh;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(183,28,28,0.9), rgba(211,47,47,0.7));
-            z-index: -1;
-        }
-
-        .hero-content {
-            text-align: center;
-            color: var(--light);
-            z-index: 1;
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Gallery Section */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-
-        .gallery-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, rgba(183,28,28,0.3), rgba(211,47,47,0.2));
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover::after {
-            opacity: 1;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            position: relative;
-            padding: 4rem;
-            background: var(--light);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 4rem 0;
-        }
-
-        .contact-form {
-            display: grid;
-            gap: 1.5rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-input {
-            padding: 1rem;
-            border: 2px solid rgba(45,36,36,0.1);
-            border-radius: 8px;
-            transition: var(--transition);
-        }
-
-        .form-input:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 10px rgba(183,28,28,0.2);
-        }
-
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .floating-element {
-            animation: float 4s ease-in-out infinite;
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            position: fixed;
-            top: 2rem;
-            left: 2rem;
-            font-size: 2rem;
-            color: var(--primary);
-            cursor: pointer;
-            z-index: 1000;
-            display: none;
-        }
-
-        @media (max-width: 1200px) {
-            .sidebar {
-                transform: translateX(-100%);
-            }
-            .sidebar.active {
-                transform: translateX(0);
-            }
-            .main-content {
-                margin-left: 0;
-            }
-            .menu-toggle {
-                display: block;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- Navigation -->
-<div class="menu-toggle"><i class="fas fa-bars"></i></div>
+<!-- Premium Sidebar -->
 <nav class="sidebar">
     <div class="logo-container">
-        <img src="assets/logo.png" alt="Logo" class="logo">
+        <img src="assets/logo.png" alt="Folklore Logo" class="logo">
     </div>
 
     <ul class="nav-links">
-        <li><a href="#" class="nav-link"><i class="fas fa-home"></i>Home</a></li>
-        <li><a href="#" class="nav-link"><i class="fas fa-info-circle"></i>About</a></li>
-        <li><a href="#" class="nav-link"><i class="fas fa-images"></i>Gallery</a></li>
-        <li><a href="#" class="nav-link"><i class="fas fa-envelope"></i>Contact</a></li>
+        <li><a href="#home" class="nav-link"><i class="fas fa-home"></i><span data-lang="home">Home</span></a></li>
+        <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i><span data-lang="about">About</span></a></li>
+        <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i><span data-lang="gallery">Gallery</span></a></li>
+        <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i><span data-lang="contact">Contact</span></a></li>
     </ul>
 
     <div class="language-switcher">
-        <button class="lang-btn">SR Latin</button>
-        <button class="lang-btn">SR Cyrillic</button>
-        <button class="lang-btn">SV</button>
+        <button class="lang-btn" data-lang="sr-Latn">SR Latin</button>
+        <button class="lang-btn" data-lang="sr-Cyrl">SR Cyrillic</button>
+        <button class="lang-btn" data-lang="sv">Svenska</button>
     </div>
 </nav>
 
 <!-- Main Content -->
 <main class="main-content">
-    <section class="hero">
-        <div class="hero-content floating-element">
-            <h1 class="hero-title">Serbian Folklor Excellence</h1>
-            <p class="hero-subtitle">Preserving Tradition Through Artistic Movement</p>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title" data-lang="heroTitle">Guardians of Tradition</h1>
+            <p class="hero-subtitle animate-on-scroll" data-lang="heroSub">Preserving Serbian Cultural Heritage Through Dance</p>
         </div>
     </section>
 
-    <!-- Add other sections here -->
+    <!-- Add About, Gallery, Contact sections -->
 </main>
 
-<script>
-    // Toggle mobile menu
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-        document.querySelector('.sidebar').classList.toggle('active');
-    });
-
-    // Smooth scroll
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const target = document.querySelector(link.getAttribute('href'));
-            target.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-    // Intersection Observer animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.gallery-item, .contact-section').forEach(el => {
-        observer.observe(el);
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
